@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: caption-generator
+    env: python
+    region: oregon # hoặc singapore
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: OPENROUTER_API_KEY
+        value: "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"  # Thay bằng API key của bạn
